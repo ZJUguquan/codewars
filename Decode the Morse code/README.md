@@ -12,7 +12,7 @@ Your task is to implement a function decodeMorse(morseCode), that would take the
 For example:
 
 decodeMorse('.... . -.--   .--- ..- -.. .')
-#should return "HEY JUDE"
+  should return "HEY JUDE"
 
 
 The Morse code table is preloaded for you as MORSE_CODE dictionary, feel free to use it. In Java, the table can be accessed like this: MorseCode.get('.--'). In C#, the preloaded Dictionary can be accessed like this: MorseCode.Get('.--');.
