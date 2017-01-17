@@ -17,6 +17,14 @@ def DigitSum(n):
         result += int(digit)
     return result
 
+def DigitSum1(x):#can be faster
+    s=0
+    x1=x
+    while(x1>0):
+        s+=x1%10
+        x1=x1/10
+    return s
+
 def power_sumDigTerm(n):
     resultTable = list()
     for i in range(2, 100):
@@ -24,6 +32,7 @@ def power_sumDigTerm(n):
         for j in range(2, 20):
             value *= i
             if(DigitSum(value) == i):
+            #if(DigitSum1(value) == i):
                 resultTable.append(value)
     resultTable.sort()
     return resultTable[n-1] # n-th term of the sequence, each term is a power of the sum of its digits
