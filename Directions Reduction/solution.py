@@ -31,3 +31,20 @@ def dirReduc(map):
             newMap = [val for id, val in enumerate(map) if id not in [idx, idx+1]]
             return dirReduc(newMap)
     return map
+
+
+#---------
+def dirReduc(arr):
+    if len(arr)<2: return arr
+    arr1=arr
+    while True:
+        index=[]
+        i=0
+        while i<len(arr1)-1:
+            if [arr1[i],arr1[i+1]] in [["NORTH","SOUTH"],["SOUTH","NORTH"],["EAST","WEST"],["WEST","EAST"]]:
+                arr1[i],arr1[i+1]=[],[]
+                i+=1
+            i+=1
+        arr2=filter(lambda x:x !=[],arr1)
+        if len(arr2)==len(arr1): return(arr2)
+        arr1=arr2
